@@ -1,0 +1,1 @@
+Journal d'équipe rédigé par le Scrum Master. 
