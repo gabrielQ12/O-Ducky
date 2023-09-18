@@ -64,6 +64,7 @@ Créer un site marchand qui permettra aux clients de se logger, d'avoir un panie
 
 ## Evolutions potentielles : 
 
+- Mettre des articles en favoris
 - Compte special Amaury
 - Une chèvre en body qui danse / qui réagit à la souris de l'user
 - Un peigne pour chauve

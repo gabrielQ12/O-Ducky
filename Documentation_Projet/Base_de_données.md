@@ -53,8 +53,6 @@ Inscription / connection  / Achat / Menu cliquable / Panier / Chaque page prévu
 
 
 
-
-
 - home/
 - home/articles
 - home/articles/article:id
@@ -67,8 +65,8 @@ Inscription / connection  / Achat / Menu cliquable / Panier / Chaque page prévu
 
 
 
-# Dictionnaire de données : 
-
 # MCD
 
 # MLD
+
+# Dictionnaire de données : 
