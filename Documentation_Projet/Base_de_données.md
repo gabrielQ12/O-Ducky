@@ -1,34 +1,29 @@
-## User Story :
+# User Story :
 
+   ## Rappel MVP :  
+
+Inscription / connection  / Achat / Menu cliquable / Panier / Chaque page prévue est accessible
 
 | En tant que |          Je souhaite              |                Afin de                       |
 |-------------|-----------------------------------|----------------------------------------------| 
-| Admin       | Voir les utilisateurs             | Voir les commandes en cours de l'utilisateur |
-| Admin       | Gérer les utilisateurs            | Supprimer certains utilisateurs              |
-| Admin       | Mettre à jour les articles        | Ajouter / Supprimer / Modifier un article    |
 | Utilisateur | Créer un compte                   | M'inscrire                                   |
 | Utilisateur | Se connecter                      | Utiliser le site                             |
 | Utilisateur | Accéder au panier                 | Mettre à jour le panier                      |
-| Utilisateur | Sélectionner un article           | Mettre en favori / panier                    |
 | Utilisateur | Commenter un article              | Donner un avis sur le produit                |
 | Utilisateur | Lire les commentaires             | Consulter les avis                           |
-| Utilisateur | Modifier le panier et les favoris | Gérer mes achats et préférences              |
+| Utilisateur | Modifier le panier                | Gérer mes achats                             |
 | Utilisateur | Ouvrir la page d'un article       | Voir les détails de l'article                |         
 
 
-## MCD
-
-## MLD
-
-## Arborescence : 
+# Arborescence : 
 
 ```
 |
 |-----/home
        |--------------/home/articles
        |                 |
-       |                 |------------/article
-       |
+       |                 |------------/article:id
+       |                                  |---------Commentaire 
        |
        |
        |--------------/signup
@@ -36,57 +31,44 @@
        |
        |--------------/login
                          |
-                         |--------/admin
-                         |         |
-                         |         |------------------/users_list
-                         |         |                      |--------/user:id
-                         |         |                      
-                         |         |
-                         |         |------------------/articles_list
-                         |                                |--------/article:id
                          |
-                         |
-                         |
-                         |
-                         |--------/user
-                                   |------------------/wishlist
-                                   |------------------/basket
-                                                        |
-                                                        |--------/payment
+                         |--------/basket
+                                 
+                                                      
 
 ```
 
 
+# Liste des routes / CRUD (Create / Read / Update / Delete): 
+
+| URL | GET | POST | PATCH| DELETE |
+|-----|-----|------|------|--------|
+| user/signup                          |  /   | Créer l'utilisateur   |  /   |  /  |
+| login/                               | / | se connecter en recupérant l'user en BDD  |/  |/  | 
+| home/                                | recupère les articles pour les affiché | / |/   | / |
+| home/articles                        | recupère les article dans BDD |/  |  / | / |
+| home/articles/article:id             | recupère l'article | / | / | / |
+| home/articles/article:id/commentaire | recupère les com deja present | il met un com |il modifier son com | il suprime son com|
+| user/basket                          | recupere les articles qu'il a mis dans le panier |/ | modifier le nombre darticle | suprimé article
 
 
-## Liste des routes / CRUD (Create / Read / Update / Delete): 
 
-GET
-POST
-PATCH
-DELETE
+
 
 - home/
 - home/articles
+- home/articles/article:id
+- home/articles/article:id/commentaire
 
 - login/
-- login/admin
-- login/user
-
-Admin : 
-
-- admin/users_list
-- admin/users_list/user:id
-- admin/articles_list
-- admin/articles_list/article:id
-
-User : 
 
 - user/signup
-- user/wishlist
 - user/basket
-- user/basket/payment
 
 
 
-## Dictionnaire de données : 
+# Dictionnaire de données : 
+
+# MCD
+
+# MLD

@@ -54,8 +54,8 @@ Créer un site marchand qui permettra aux clients de se logger, d'avoir un panie
 
 ## MVP : 
 
-- Login 
 - Inscription
+- Connection
 - Achat
 - Menu cliquable
 - Panier

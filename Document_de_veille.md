@@ -1,4 +1,4 @@
-Tous ce qui servira aux recherches techniques
+Tout ce qui servira aux recherches techniques
 
 Bugs rencontrés 
 
