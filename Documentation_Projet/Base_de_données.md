@@ -78,20 +78,28 @@ FAIT , voir PNG dans le repo
 
 # MLD
 
-Admin (ID généré en BDD, name, password,mail):
-      Peux modifier un article (#admin_has_article)
 
-User (ID généré en BDD,name, password, mail):   
-   possede un panier (#user_has_basket)
-
-Basket (ID généré en BDD, prix_total)
-   possede un article (basket_has_article)
-
-article (ID généré en BDD, name, content, picture, price )
-
-Commentaire (ID généré en BDD, content)
-   est posté par un utilisateur (#comment_has_user)
+Entité admin: 
+   - ID généré en BDD, name, password,mail
+   - Peux modifier un article (#admin_has_article)
 
 
+Entité user: 
+   - ID généré en BDD,name, password, mail   
+   - possede un panier (#user_has_basket)
 
-# Dictionnaire de données : 
+
+Entité basket: 
+   - ID généré en BDD, prix_total
+   - possede un article (basket_has_article)
+
+
+Entité article:
+   - ID généré en BDD, name, content, picture, price 
+
+
+Entité comment: 
+   - ID généré en BDD, content
+   - est posté par un utilisateur (#comment_has_user)
+
+
