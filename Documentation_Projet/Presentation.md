@@ -17,7 +17,7 @@ Age cible : 9 ans a 99 ans.
 
 ## Objectifs : 
 
-Créer un site marchand qui permettra aux clients de se logger, d'avoir un panier, reprendre un achat plus tard, mettre un article en favori , laisser un commentaire,  valider un achat et payer.
+Créer un site marchand qui permettra aux clients de se logger, d'avoir un panier, reprendre un achat plus tard, laisser un commentaire,  valider un achat et payer.
 
 
 ## Solutions : 
@@ -26,7 +26,7 @@ Créer un site marchand qui permettra aux clients de se logger, d'avoir un panie
 - Mise en place de securité.
 - Gestion des cookies et de la session du panier notamment. 
 - Un front accessible et esthétique. 
-- Une page de paiement fictive
+
 
 
 ## Fonctionnalités :
@@ -34,9 +34,7 @@ Créer un site marchand qui permettra aux clients de se logger, d'avoir un panie
 - Inscription
 - Login
 - Panier (nombre d'articles dans le panier): 
-- Favoris
 - Espace commentaires
-- Espace client (Commandes passées, favoris, historiques des commentaires, informations personnelles )
 - Pop-up pour accepter les cookies
 - Reprendre un achat
 - Valider un achat
@@ -65,14 +63,13 @@ Créer un site marchand qui permettra aux clients de se logger, d'avoir un panie
 ## Evolutions potentielles : 
 
 - Mettre des articles en favoris
-- Compte special Amaury
 - Une chèvre en body qui danse / qui réagit à la souris de l'user
-- Un peigne pour chauve
 - Panier dynamique : déroule au hover
 - Pastille avec le nombre d'articles dans le panier
 - Bot qui répond aux questions (codable via POE) 
 - Front qui se modifie en fonction des saisons 
-
+- Une page de paiement fictive
+- Espace client (Commandes passées, favoris, historiques des commentaires, informations personnelles )
 
 ## Liste des roles : 
 
