@@ -5,10 +5,13 @@
 Inscription / connection  / Achat / Menu cliquable / Panier / Chaque page prévue est accessible
 
 | En tant que |          Je souhaite              |                Afin de                       |
-|-------------|-----------------------------------|----------------------------------------------| 
+|-------------|-----------------------------------|----------------------------------------------|
 | visiteur    | Créer un compte                   | M'inscrire                                   |
 | visiteur    | Voir les articles                 | Savoir si un canard me plais                 |
 | Visiteur    | Lire les commentaires             | Consulter les avis                           |
+| Admin       | modifier un article               | gerer les articles                           |
+| Admin       | suprimer un article               | gerer les articles                           |
+| Admin       | créer un article                  | gerer les articles                           |
 | Utilisateur | Se connecter                      | Utiliser le site                             |
 | Utilisateur | Accéder au panier                 | Mettre à jour le panier                      |
 | Utilisateur | Commenter un article              | Donner un avis sur le produit                |
@@ -43,56 +46,27 @@ Inscription / connection  / Achat / Menu cliquable / Panier / Chaque page prévu
 
 # Liste des routes / CRUD (Create / Read / Update / Delete): 
 
-| URL | GET | POST | PATCH| DELETE |
-|-----|-----|------|------|--------|
-| /admin                               | recupére article | créer article | modifier article|suprime article|
-| user                                 |/| Créer l'utilisateur   |/|/|
-| login/                               |/| se connecter en recupérant l'user en BDD  |/|/| 
-| articles                             | recupère les articles dans BDD |/|/|/|
-| articles/article:id                  | recupère l'article |/|/|/|
-| articles/article:id/commentaire      | recupère les com deja presents | il met un com |il modifi son com | il suprime son com|
-| user/basket                          | recupere les articles qu'il a mis dans le panier |/| modifier le nombre darticle | suprimer article
 
-|---------------------------------|
-
-|URL        | HTTP   | Description             | données attendues     | Authorisation|
-|-----------|--------|-------------------------|-----------------------|--------------|
-|/admin     | GET    | recupère les articles   |  get all articles     | full acces   |
-|           | POST   | créer les articles      |  post one article     | full acces   |
-|           | PATCH  | modifier les articles   | patch one article     | full acces   |
-|           | DELETE | supprimer les articles  | delete one article    | full acces   |
-|           |        |                         |                       |              |
-|/user      | POST   | Crer l'utilisateur      | email/password/pseudo | requete post |
-|           |        |                         |                       |              |
-|/login     | POST   | Connexion de l'user     | email/password/pseudo | requete post |
-|           |        |                         |                       |              |
-|/user/:id  | GET    | recupérer un utilisateur| pseudo/password       | requete get
-|           | PATCH  | modifier un utilisateur | pseudo/password       | requete patch
-|           | DELETE | suprimer l'utilisateur  | pseudo/password       | requete delete
-
-
-
-
-
-
-
-
-
-
-
-
-
-- home/
-- home/articles
-- home/articles/article:id
-- home/articles/article:id/commentaire
-
-- login/
-
-- user/signup
-- user/basket
-
-
+|URL                              | HTTP   | Description              | données attendues         | Authorisation             |
+|---------------------------------|--------|--------------------------|---------------------------|---------------------------|
+|/admin                           | GET    | recupère un article      |  article  id              | get one article           |
+|                                 | POST   | créer un article         |  article  id              | post one article          |
+|                                 | PATCH  | modifier un article      |  article  id              | patch one article         |
+|                                 | DELETE | supprimer un   article   |  article  id              | delete one article        |
+|/user                            | POST   | Créer l'utilisateur      | email/password/pseudo     |  post user                |
+|/login                           | POST   | Connexion de l'user      | email/password/pseudo     |  post user  / verify      | 
+|/user/:id                        | GET    | recupérer un utilisateur | pseudo/password           |  get user                 | 
+|                                 | PATCH  | modifier un utilisateur  | pseudo/password           |  patch pseudo/password    | 
+|                                 | DELETE | supprimer l'utilisateur  | pseudo/password           |  delete account           |
+|/articles                        | GET    | récupère les articles    | tous les articles         |  get all articles         |
+|/articles/articles:id            | GET    | récupère 1 article       |  un article id            |  Get one article          |
+|/articles/article:id/commentaire | GET    | récupère les commentaires| des commentaires          |  Get all com from article |
+|                                 | POST   | Mettre des commentaires  |  commentaire id           |  Post one commentaire     |
+|                                 | PATCH  | modifier son commentaire |  commentaire id           |  Patch one commentaire    |
+|                                 | DELETE | supprimer son commentaire|  commentaire id           |  delete one commentaire   |
+|/user/basket                     | GET    | récupéré les articles    | articles                  |  Get all articles         |
+|                                 | PATCH  | Modifier le nb d'articles| nombres                   |  Patch nb article         |
+|                                 | DELETE | Supprimer un article     | article id                |  delete article           |
 
 # MCD
 
