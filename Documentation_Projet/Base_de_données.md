@@ -70,7 +70,28 @@ Inscription / connection  / Achat / Menu cliquable / Panier / Chaque page prévu
 
 # MCD
 FAIT , voir PNG dans le repo
+
+<p align="center">
+  <img src="./../MCD.png">
+</p>
+
+
 # MLD
+
+Admin (ID généré en BDD, name, password,mail):
+      Peux modifier 1 article ( #admin_has_articles)
+
+User (ID généré en BDD,name, password, mail):
+   choisit un article   (#user_has_article)    
+   possede un panier (#user_has_basket)
+
+Basket (ID généré en BDD, prix_total)
+   possede un article (basket_has_article)
+
+article (ID généré en BDD, name, content,picture, price )
+
+Commentaire (ID généré en BDD, content)
+   est posté par un utilisateur (#comment_has_user)
 
 
 
