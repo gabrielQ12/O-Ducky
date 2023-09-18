@@ -69,7 +69,9 @@ Inscription / connection  / Achat / Menu cliquable / Panier / Chaque page prévu
 |                                 | DELETE | Supprimer un article     | article id                |  delete article           |
 
 # MCD
-
+FAIT , voir PNG dans le repo
 # MLD
+
+
 
 # Dictionnaire de données : 
