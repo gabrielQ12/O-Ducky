@@ -79,16 +79,15 @@ FAIT , voir PNG dans le repo
 # MLD
 
 Admin (ID généré en BDD, name, password,mail):
-      Peux modifier 1 article ( #admin_has_articles)
+      Peux modifier un article (#admin_has_article)
 
-User (ID généré en BDD,name, password, mail):
-   choisit un article   (#user_has_article)    
+User (ID généré en BDD,name, password, mail):   
    possede un panier (#user_has_basket)
 
 Basket (ID généré en BDD, prix_total)
    possede un article (basket_has_article)
 
-article (ID généré en BDD, name, content,picture, price )
+article (ID généré en BDD, name, content, picture, price )
 
 Commentaire (ID généré en BDD, content)
    est posté par un utilisateur (#comment_has_user)
