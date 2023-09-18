@@ -21,6 +21,7 @@
 ## MLD
 
 ## Arborescence : 
+
 ```
 |
 |-----/home
@@ -58,7 +59,12 @@
 
 
 
-## Liste des routes : 
+## Liste des routes / CRUD (Create / Read / Update / Delete): 
+
+GET
+POST
+PATCH
+DELETE
 
 - home/
 - home/articles
