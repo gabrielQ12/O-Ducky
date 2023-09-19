@@ -73,14 +73,15 @@ Créer un site marchand qui permettra aux clients de se logger, d'avoir un panie
 
 ## Liste des roles : 
 
-Product owner      ==> Constance
-Scrum master       ==> Gabriel 
-Lead dev front     ==> Anais
+```
+Product owner      ==> Constance (Fork Master)
+Scrum master       ==> Gabriel   (DataBase Daddy)
+Lead dev front     ==> Anais     (Fourchette en second)
 Lead dev back      ==> Gabriel
-Git master         ==> Lea
+Git master         ==> Lea       (hell segnora del Git)
 Référent technique ==> Anais (React)
-Référent technique ==> Constance (PGAdmin / SQL / Tout )
-
+Référent technique ==> Constance (PGAdmin / SQL / Tout)
+```
 
 ##	Technologie utilisées :
 
@@ -89,3 +90,23 @@ GitHub pour la gestion de projet.
 Front : React native + CSS + TypeScript 
 
 Back : PostgreSQL + PGadmin + mocha & jest pour le test
+
+## Fonctionnement de github : 
+
+Deux repo : un front et un back.
+
+Chacun push sur sa branche ,  Lea Merge après le Daily meeting du matin pour plus de cohérance.
+
+Charte pour les commit : initial + tache effectué 
+                                                                    
+                                                                                            
+                                            |-----Branche Feature X ----->| le matin pull pour récupérér le merge de Lea
+                                            |-----Branche Featue X                                     
+Master Front (personnes ne push dessus)------
+                                            |-----Branche Feature X ---->Commit "a.c_carrousel_home_page"
+                                                                                                
+
+
+                                            |-----Branche Feature X ---> |
+Master Back (personnes ne push dessus)--------
+                                            |-----Branche Feature X ---> |

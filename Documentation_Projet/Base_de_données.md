@@ -72,7 +72,7 @@ Inscription / connection  / Achat / Menu cliquable / Panier / Chaque page prévu
 FAIT , voir PNG dans le repo
 
 <p align="center">
-  <img src="./../MCD.png">
+  <img src="./MCD.png">
 </p>
 
 
