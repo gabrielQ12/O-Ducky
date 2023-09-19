@@ -78,7 +78,6 @@ FAIT , voir PNG dans le repo
 
 # MLD
 
-
 Entité admin: 
    - ID généré en BDD, name, password,mail
    - Peux modifier un article (#admin_has_article)
@@ -90,7 +89,7 @@ Entité user:
 
 
 Entité basket: 
-   - ID généré en BDD, prix_total
+   - ID généré en BDD, total_price
    - possede un article (basket_has_article)
 
 
