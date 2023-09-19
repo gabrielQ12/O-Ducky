@@ -87,7 +87,7 @@ Entité user:
 
 Entité article: 
    - Unique identifier, title, content, pic, price
-   - comment_identifier
+   - #comment_identifier
 
 
 Entité comment: 

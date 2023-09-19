@@ -87,7 +87,7 @@ GitHub pour la gestion de projet.
 
 Front : React native + CSS + TypeScript 
 
-Back : PostgreSQL + PGadmin + mocha & jest pour le test + bicrypt + salt
+Back : PostgreSQL + PGadmin + mocha & jest pour le test + bcrypt + salt
 
 ## Fonctionnement de github : 
 
