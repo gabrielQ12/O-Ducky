@@ -59,12 +59,12 @@ Inscription / connection  / Achat / Menu cliquable / Panier / Chaque page prévu
 |                                 | PATCH  | modifier un utilisateur  | pseudo/password           |  patch pseudo/password    | 
 |                                 | DELETE | supprimer l'utilisateur  | pseudo/password           |  delete account           |
 |/articles                        | GET    | récupère les articles    | tous les articles         |  get all articles         |
-|/articles/articles:id            | GET    | récupère 1 article       |  un article id            |  Get one article          |
-|/articles/article:id/commentaire | GET    | récupère les commentaires| des commentaires          |  Get all com from article |
+|/articles/:articlesid            | GET    | récupère 1 article       |  un article id            |  Get one article          |
+|/articles/:articleid/comment     | GET    | récupère les commentaires| des commentaires          |  Get all com from article |
 |                                 | POST   | Mettre des commentaires  |  commentaire id           |  Post one commentaire     |
 |                                 | PATCH  | modifier son commentaire |  commentaire id           |  Patch one commentaire    |
 |                                 | DELETE | supprimer son commentaire|  commentaire id           |  delete one commentaire   |
-|/user/basket                     | GET    | récupéré les articles    | articles                  |  Get all articles         |
+|/user/card                       | GET    | récupéré les articles    | articles                  |  Get all articles         |
 |                                 | PATCH  | Modifier le nb d'articles| nombres                   |  Patch nb article         |
 |                                 | DELETE | Supprimer un article     | article id                |  delete article           |
 
@@ -78,27 +78,27 @@ FAIT , voir PNG dans le repo
 
 # MLD
 
-Entité admin: 
-   - ID généré en BDD, name, password,mail
-   - Peux modifier un article (#admin_has_article)
-
 
 Entité user: 
-   - ID généré en BDD,name, password, mail   
-   - possede un panier (#user_has_basket)
+   - Unique identifier, name,password, mail
+   - #comment_identifier
 
 
-Entité basket: 
-   - ID généré en BDD, total_price
-   - possede un article (basket_has_article)
 
-
-Entité article:
-   - ID généré en BDD, name, content, picture, price 
+Entité article: 
+   - Unique identifier, title, content, pic, price
+   - comment_identifier
 
 
 Entité comment: 
-   - ID généré en BDD, content
-   - est posté par un utilisateur (#comment_has_user)
+   - Unique identifier, content
+
+
+Table de liaison :
+
+user_has_article:
+   - #article_identifier
+   - #user_identifier
+
 
 

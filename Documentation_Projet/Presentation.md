@@ -38,26 +38,24 @@ Créer un site marchand qui permettra aux clients de se logger, d'avoir un panie
 - Pop-up pour accepter les cookies
 - Reprendre un achat
 - Valider un achat
+- Un compte admin
 
 
 ## Navigateur compatible : 
 
 - Chrome 
 - Firefox 
-- Opera GX 
 - Edge 
-- Safari 
-- Brave
 
 
 ## MVP : 
 
 - Inscription
 - Connection
+- Filtrage des articles de A à Z 
 - Achat
-- Menu cliquable
 - Panier
-- Chaque page prévue est accessible
+- Commentaires
 
 
 ## Evolutions potentielles : 
@@ -89,24 +87,12 @@ GitHub pour la gestion de projet.
 
 Front : React native + CSS + TypeScript 
 
-Back : PostgreSQL + PGadmin + mocha & jest pour le test
+Back : PostgreSQL + PGadmin + mocha & jest pour le test + bicrypt + salt
 
 ## Fonctionnement de github : 
 
 Deux repo : un front et un back.
 
-Chacun push sur sa branche ,  Lea Merge après le Daily meeting du matin pour plus de cohérance.
+Chacun push sur sa branche (feature)
 
-Charte pour les commit : initial + tache effectué 
-                                                                    
-                                                                                            
-                                            |-----Branche Feature X ----->| le matin pull pour récupérér le merge de Lea
-                                            |-----Branche Featue X                                     
-Master Front (personnes ne push dessus)------
-                                            |-----Branche Feature X ---->Commit "a.c_carrousel_home_page"
-                                                                                                
-
-
-                                            |-----Branche Feature X ---> |
-Master Back (personnes ne push dessus)--------
-                                            |-----Branche Feature X ---> |
+Lea mergera chaque pull request vers la branch develop. et a chaque fin de sprint Lea mergera vers la master.
