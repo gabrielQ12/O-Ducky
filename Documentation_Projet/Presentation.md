@@ -67,7 +67,8 @@ Créer un site marchand qui permettra aux clients de se logger, d'avoir un panie
 - Bot qui répond aux questions (codable via POE) 
 - Front qui se modifie en fonction des saisons 
 - Une page de paiement fictive
-- Espace client (Commandes passées, favoris, historiques des commentaires, informations personnelles )
+- Espace client (Commandes passées, favoris, historiques des commentaires, informations personnelles)
+- Codé une redondance de BDD pour la securité
 
 ## Liste des roles : 
 
