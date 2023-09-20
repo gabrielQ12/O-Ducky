@@ -48,27 +48,27 @@
 # Liste des routes / CRUD (Create / Read / Update / Delete): 
 
 
-|URL                              | HTTP   | Description              | données attendues         | Authorisation             |
-|---------------------------------|--------|--------------------------|---------------------------|---------------------------|
-|/admin                           | GET    | recupère un article      |  article  id              |  get one article           |
-|                                 | POST   | créer un article         |  article  id              |  post one article          |
-|                                 | PATCH  | modifier un article      |  article  id              |  patch one article         |
-|                                 | DELETE | supprimer un   article   |  article  id              |  delete one article        |
-|/user                            | POST   | Créer l'utilisateur      | email/password/pseudo     |  post user                |
-|/login                           | POST   | Connexion de l'user      | email/password/pseudo     |  post user  / verify      | 
-|/user/:id                        | GET    | recupérer un utilisateur | pseudo/password           |  get user                 | 
-|                                 | PATCH  | modifier un utilisateur  | pseudo/password           |  patch pseudo/password    | 
-|                                 | DELETE | supprimer l'utilisateur  | pseudo/password           |  delete account           |
-|/articles                        | GET    | récupère les articles    | tous les articles         |  get all articles         |
-|/articles                        | GET    | Trie de A à Z            | Tous les article          |  Order by 
-|/articles/:articlesid            | GET    | récupère 1 article       |  un article id            |  Get one article          |
-|/articles/:articleid/comment     | GET    | récupère les commentaires| des commentaires          |  Get all com from article |
-|                                 | POST   | Mettre des commentaires  |  commentaire id           |  Post one commentaire     |
-|                                 | PATCH  | modifier son commentaire |  commentaire id           |  Patch one commentaire    |
-|                                 | DELETE | supprimer son commentaire|  commentaire id           |  delete one commentaire   |
-|/user/cart                       | GET    | récupéré les articles    | articles                  |  Get all articles         |
-|                                 | PATCH  | Modifier le nb d'articles| nombres                   |  Patch nb article         |
-|                                 | DELETE | Supprimer un article     | article id                |  delete article           |
+|URL                              | HTTP   | Description               | Données attendues        | Autorisation             |
+|---------------------------------|--------|---------------------------|--------------------------|--------------------------|
+|/admin                           | GET    | Recupèrer un article      | Article  id              | GET one article          |
+|                                 | POST   | Créer un article          | Article  id              | POST one article         |
+|                                 | PATCH  | Modifier un article       | Article  id              | PATCH one article        |
+|                                 | DELETE | Supprimer un article      | Article  id              | DELETE one article       |
+|/user                            | POST   | Créer l'utilisateur       | Email/password/name      | POST user                |
+|/login                           | POST   | Connecter l'user          | Email/password/name      | POST user / verify       | 
+|/user/:id                        | GET    | Recupérer un utilisateur  | name/password            | GET user                 | 
+|                                 | PATCH  | Modifier un utilisateur   | name/password            | PATCH name/password      | 
+|                                 | DELETE | Supprimer l'utilisateur   | name/password            | DELETE account           |
+|/articles                        | GET    | Récupèrer les articles    | Tous les articles        | GET all articles         |
+|/articles                        | GET    | Trier de A à Z            | Tous les articles        | ORDER by                 |
+|/articles/:articlesid            | GET    | Récupèrer 1 article       | Un article id            | GET one article          |
+|/articles/:articleid/comment     | GET    | Récupèrer les commentaires| Des commentaires         | GET all com from article |
+|                                 | POST   | Mettre des commentaires   | Commentaire id           | POST one comment         |
+|                                 | PATCH  | Modifier son commentaire  | Commentaire id           | PATCH one comment        |
+|                                 | DELETE | Supprimer son commentaire | Commentaire id           | DELETE one comment       |
+|/user/cart                       | GET    | Récupérer les articles    | Articles                 | GET all articles         |
+|                                 | PATCH  | Modifier le nb d'articles | Nombres                  | PATCH nb article         |
+|                                 | DELETE | Supprimer un article      | Article id               | DELETE article           |
 
 # MCD
 FAIT , voir PNG dans le repo
@@ -82,7 +82,7 @@ FAIT , voir PNG dans le repo
 
 
 Entité user: 
-   - Unique identifier, name,password, mail
+   - Unique identifier, name, password, mail
 
 
 Entité article: 
