@@ -1,0 +1,13 @@
+- article_identifier
+- title
+- content
+- pic
+- price
+- content
+- quantity
+- order_identifier
+- status
+- user_identifier
+- name
+- mail
+- password

@@ -7,12 +7,12 @@
 | En tant que |          Je souhaite              |                Afin de                       |
 |-------------|-----------------------------------|----------------------------------------------|
 | visiteur    | Créer un compte                   | M'inscrire                                   |
-| visiteur    | Voir les articles                 | Savoir si un canard me plais                 |
-| visiteur    | Filtrer les articles              | Chercher un articles                         |
+| visiteur    | Voir les articles                 | Savoir si un canard me plait                 |
+| visiteur    | Filtrer les articles              | Chercher un article                          |
 | Visiteur    | Lire les commentaires             | Consulter les avis                           |
-| Admin       | modifier un article               | gerer les articles                           |
-| Admin       | suprimer un article               | gerer les articles                           |
-| Admin       | créer un article                  | gerer les articles                           |
+| Admin       | Modifier un article               | Gerer les articles                           |
+| Admin       | Supprimer un article              | Gerer les articles                           |
+| Admin       | Créer un article                  | Gerer les articles                           |
 | Utilisateur | Se connecter                      | Utiliser le site                             |
 | Utilisateur | Accéder au panier                 | Mettre à jour le panier                      |
 | Utilisateur | Commenter un article              | Donner un avis sur le produit                |
@@ -80,27 +80,72 @@ FAIT , voir PNG dans le repo
 
 # MLD
 
+Entité USER: 
+   - user_identifier, name, mail, password
 
-Entité user: 
-   - Unique identifier, name, password, mail
+Entité ARTICLE:
+   - article_identifier, title, content, pic, price
+
+Entité ORDER:
+   - order_identifier, status, #user_identifier
+
+Tables de liaison : 
+
+Entité COMMENTS:
+   - #user_identifier, #article_identifier, content
+  
+Entité CONTAINS: 
+   - #article_identifier, #order_identifier, quantity
+
+# Dictionnaire de données
+
+Table USER :
+
+| Champ           | Type       | Spécificités                                   | Description                             |
+|-----------------|------------|------------------------------------------------|-----------------------------------------|
+| user_identifier | INTEGER    | INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY   | Identification unique généré auto en BDD|
+| name            | TEXT       | NOT NULL                                       | Nom de l'utilisateur                    |
+| mail            | TEXT       | NOT NULL UNIQUE (penser aux REGEX pour les @..)| Adresse mail de l'utilisateur           |
+| password        | TEXT       | NOT NULL (60)                                  | 60 caract pour stocker un hachage Bcrypt|
 
 
-Entité article: 
-   - Unique identifier, title, content, pic, price
+Table ARTICLE:
+
+| Champ              | Type       | Spécificités                                   | Description                             |
+|--------------------|------------|------------------------------------------------|-----------------------------------------|
+| article_identifier | INTEGER    | INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY   | Identification unique généré auto en BDD|
+| title              | TEXT       | NOT NULL UNIQUE                                | Nom de l'article                        |
+| content            | TEXT       | NOT NULL                                       | Description de l'article                |
+| pic                | BYTEA      | NOT NULL UNIQUE                                | Image de l'article stocker en binaire   |
+| price              | INTEGER    | NOT NULL                                       | Prix de l'article                       |
 
 
-Entité comment: 
-   - Unique identifier, content
-   - #article_identifier
-   - #user_identifier
 
-Tables de liaison :
+Table ORDER:
 
-user_cart:
-   - #article_identifier
-   - #user_identifier
+| Champ              | Type       | Spécificités                                   | Description                             |
+|--------------------|------------|------------------------------------------------|-----------------------------------------|
+| order_identifier   | INTEGER    | INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY   | Identification unique généré auto en BDD|
+| status             | BOOLEAN    | CHECK (status IS TRUE)                         | Si le statut est TRUE larticle est dans le panier,  si le statut est FALSE l'article sort du panier
+| #user_identifier   | INTEGER    | INT REFERENCES user (id)                       | Clé étrangère                           |
 
-user_order:
-   - #article_identifier
-   - #user_identifier
+Tables de liaison : 
+
+Table COMMENTS:
+
+| Champ              | Type       | Spécificités                                   | Description                             |
+|--------------------|------------|------------------------------------------------|-----------------------------------------|
+| #user_identifier   | INTEGER    | INT REFERENCES user (id)                       | Clé étrangère                           |
+| #article_identifier| INTEGER    | INT REFERENCES article (id)                    | Clé étrangère                           |
+| content            | TEXT       | NOT NULL                                       | Contenu du commentaire                  |
+
+
+Table CONTAINS: 
+
+| Champ              | Type       | Spécificités                                   | Description                             |
+|--------------------|------------|------------------------------------------------|-----------------------------------------|
+| #article_identifier| INTEGER    | INT REFERENCES user (id)                       | Clé étrangère                           |
+| #order_identifier  | INTEGER    | INT REFERENCES user (id)                       | Clé étrangère                           | 
+| quantity           | INTEGER    | NOT NULL                                       | Quantité darticles                      |
+
 

@@ -1,0 +1,18 @@
+%%mocodo
+:
+ORDER: order_identifier, status, #user_identifier->USER->user_identifier
+:::
+
+
+:
+CONTAINS: #article_identifier->ARTICLE->article_identifier, _#order_identifier->ORDER->order_identifier, quantity
+:
+USER: user_identifier, name, mail, password
+:
+
+
+:
+ARTICLE: article_identifier, title, content, pic, price
+:
+COMMENTS: #user_identifier->USER->user_identifier, _#article_identifier->ARTICLE->article_identifier, content
+:

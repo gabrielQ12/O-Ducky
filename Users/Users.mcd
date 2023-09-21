@@ -1,0 +1,16 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                          %
+%                          ENTITÉ                          %
+%                                                          %
+%  Pour créer une entité E, écrivez sur une ligne « E: ».  %
+%                                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ORDER:order_identifier,status
+MAKES, 0N USER, 11 ORDER
+
+CONTAINS, 1N ARTICLE,0N ORDER : quantity
+USER: user_identifier, name,  mail,  password
+
+ARTICLE: article_identifier, title, content, pic, price
+COMMENTS, 0N USER, 0N ARTICLE : content

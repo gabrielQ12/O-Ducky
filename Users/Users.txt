@@ -1,0 +1,5 @@
+ARTICLE (_article_identifier_, title, content, pic, price)
+COMMENTS (_#user_identifier_, _#article_identifier_, content)
+CONTAINS (_#article_identifier_, _#order_identifier_, quantity)
+ORDER (_order_identifier_, status, #user_identifier)
+USER (_user_identifier_, name, mail, password)
