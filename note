@@ -1,0 +1,6 @@
+const modifierimage : 
+
+        if is_admin = TRUE ==> executer la fonction de modification de l'image 
+
+        else 
+        (vous n'avez pas l'autorisation ,  vous etes un modlue) ;

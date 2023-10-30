@@ -126,7 +126,7 @@ Table ORDER:
 | Champ              | Type       | Spécificités                                   | Description                             |
 |--------------------|------------|------------------------------------------------|-----------------------------------------|
 | order_identifier   | INTEGER    | INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY   | Identification unique généré auto en BDD|
-| status             | BOOLEAN    | CHECK (status IS TRUE)                         | Si le statut est TRUE larticle est dans le panier,  si le statut est FALSE l'article sort du panier
+| status             | BOOLEAN (issus en cours)   | CHECK (status IS TRUE)                         | Si le statut est TRUE larticle est dans le panier,  si le statut est FALSE l'article sort du panier
 | #user_identifier   | INTEGER    | INT REFERENCES user (id)                       | Clé étrangère                           |
 
 Tables de liaison : 

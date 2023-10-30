@@ -86,9 +86,13 @@ Référent technique ==> Constance (PGAdmin / SQL / Tout)
 
 GitHub pour la gestion de projet.  
 
-Front : React native + CSS + TypeScript 
+Front : React vanilla + CSS + TypeScript 
 
 Back : PostgreSQL + PGadmin + mocha & jest pour le test + bcrypt + salt
+
+Coté Back : on a fais du postgreSQL . Pour les test on a utilisé RESTClient pour testé les routes,  Mocha pour mon module de securité,  des console log ,  et PGAdmin pour tester les requette SQL . Bcrypt c'est la bilbiotheque de hash de mot de passe,  et le SALT c'est le taux de salaison ,  un SALT ca veux dire ==< combien de tour d'algorythme on fait pour hasher le mot de passe
+
+on a pas utiliser Jest finalement
 
 ## Fonctionnement de github : 
 
